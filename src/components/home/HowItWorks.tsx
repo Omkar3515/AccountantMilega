@@ -1,8 +1,65 @@
 import { ArrowRight } from "lucide-react";
 import Container from "../common/Container";
+import Reveal from "../common/Reveal";
 import { CANDIDATE_STEPS, EMPLOYER_STEPS } from "../../constants/howItWorks";
 
-interface StepsPanelProps { title: string; steps: typeof CANDIDATE_STEPS; tone: "green" | "blue"; }
-const StepsPanel = ({ title, steps, tone }: StepsPanelProps) => { const colors = tone === "green" ? "border-green-100 bg-green-50/70 text-green-600" : "border-blue-100 bg-blue-50/70 text-blue-600"; return <div className={`rounded-3xl border p-5 sm:p-8 ${colors}`}><h3 className="text-center text-xl font-bold sm:text-2xl">{title}</h3><div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-3">{steps.map((step, index) => { const Icon = step.icon; return <div key={step.title} className="relative text-center"><div className="flex items-center justify-center"><div className="flex h-14 w-14 items-center justify-center rounded-full border border-current/15 bg-white shadow-sm sm:h-16 sm:w-16"><Icon size={24} strokeWidth={2} /></div>{index !== steps.length - 1 && <ArrowRight size={16} className="absolute -right-2 hidden xl:block" />}</div><h4 className="mt-4 text-sm font-bold text-slate-950">{index + 1}. {step.title}</h4><p className="mt-2 text-sm leading-6 text-slate-600">{step.description}</p></div>; })}</div></div>; };
-const HowItWorks = () => <section className="bg-slate-50 py-14 sm:py-20 lg:py-24"><Container><h2 className="text-center text-3xl font-bold text-slate-950 sm:text-4xl">How It Works</h2><div className="mt-10 grid gap-6 lg:grid-cols-2"><StepsPanel title="For Candidates" steps={CANDIDATE_STEPS} tone="green" /><StepsPanel title="For Employers" steps={EMPLOYER_STEPS} tone="blue" /></div></Container></section>;
+interface StepsPanelProps {
+  title: string;
+  steps: typeof CANDIDATE_STEPS;
+  tone: "green" | "blue";
+}
+const StepsPanel = ({ title, steps, tone }: StepsPanelProps) => {
+  const colors =
+    tone === "green"
+      ? "border-green-100 bg-green-50/70 text-green-600"
+      : "border-blue-100 bg-blue-50/70 text-blue-600";
+  return (
+    <div className={`rounded-3xl border p-5 sm:p-8 ${colors}`}>
+      <h3 className="text-center text-xl font-bold sm:text-2xl">{title}</h3>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-3">
+        {steps.map((step, index) => {
+          const Icon = step.icon;
+          return (
+            <div key={step.title} className="relative text-center">
+              <div className="flex items-center justify-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-current/15 bg-white shadow-sm sm:h-16 sm:w-16">
+                  <Icon size={24} strokeWidth={2} />
+                </div>
+                {index !== steps.length - 1 && (
+                  <ArrowRight
+                    size={16}
+                    className="absolute -right-2 hidden xl:block"
+                  />
+                )}
+              </div>
+              <h4 className="mt-4 text-sm font-bold text-slate-950">
+                {index + 1}. {step.title}
+              </h4>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {step.description}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+const HowItWorks = () => (
+  <section className="bg-slate-50 py-14 sm:py-20 lg:py-24">
+    <Container>
+      <Reveal><h2 className="text-center text-3xl font-bold text-slate-950 sm:text-4xl">How It Works</h2></Reveal>
+      <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <Reveal>
+          <StepsPanel
+          title="For Candidates"
+          steps={CANDIDATE_STEPS}
+          tone="green"
+          />
+        </Reveal>
+        <Reveal delay={0.1}><StepsPanel title="For Employers" steps={EMPLOYER_STEPS} tone="blue" /></Reveal>
+      </div>
+    </Container>
+  </section>
+);
 export default HowItWorks;
