@@ -54,7 +54,7 @@ const HeroCard = ({
 };
 
 const HeroSection = () => (
-  <section className="bg-gradient-to-b from-slate-50 to-white py-12 sm:py-16 lg:py-20">
+  <section className="bg-linear-to-b from-slate-50 to-white py-12 sm:py-16 lg:py-20">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <Reveal className="max-w-3xl">
