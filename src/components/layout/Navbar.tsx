@@ -32,12 +32,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden items-center gap-3 xl:flex">
-            <Button
-              type="button"
-              className="border border-blue-200 text-blue-600 hover:bg-blue-50"
-            >
-              Login
-            </Button>
+            <Link to="/login" className="inline-flex min-h-11 items-center justify-center rounded-xl border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50">Login</Link>
             <Button
               type="button"
               className="bg-blue-600 text-white hover:bg-blue-700"
@@ -71,12 +66,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                <Button
-                  type="button"
-                  className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50"
-                >
-                  Login
-                </Button>
+                <Link to="/login" onClick={() => setIsOpen(false)} className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-blue-600 px-5 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50">Login</Link>
                 <Button
                   type="button"
                   className="w-full bg-blue-600 text-white hover:bg-blue-700"

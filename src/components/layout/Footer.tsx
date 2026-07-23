@@ -25,7 +25,7 @@ const Footer = () => (
             <SocialLink
               label="Instagram"
               icon="instagram"
-              className="bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 hover:opacity-90"
+              className="bg-linear-to-tr from-amber-500 via-pink-500 to-purple-600 hover:opacity-90"
             />
             <SocialLink
               label="WhatsApp"
@@ -153,7 +153,7 @@ const BrandIcon = ({
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-[18px] w-[18px] stroke-current stroke-[1.8] ${name === "instagram" ? "fill-none" : "fill-current stroke-none"}`}
+      className={`h-4.5 w-4.5 stroke-current stroke-[1.8] ${name === "instagram" ? "fill-none" : "fill-current stroke-none"}`}
       aria-hidden="true"
     >
       {paths[name]}
@@ -169,7 +169,7 @@ const Contact = ({
 }) => (
   <div className="flex gap-3">
     <Icon size={18} className="shrink-0 text-blue-600" />
-    <span className="break-words">{children}</span>
+    <span className="wrap-break-word">{children}</span>
   </div>
 );
 export default Footer;

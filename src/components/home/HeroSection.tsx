@@ -29,7 +29,7 @@ const HeroCard = ({
       : "bg-blue-600 hover:bg-blue-700";
   return (
     <div
-      className={`flex min-h-[230px] flex-col justify-between rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6 ${palette}`}
+      className={`flex min-h-57.5 flex-col justify-between rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6 ${palette}`}
     >
       <div className="flex items-start gap-3 sm:gap-4">
         <div
@@ -91,7 +91,7 @@ const HeroSection = () => (
           <img
             src={HeroImage}
             alt="Accountant at work"
-            className="aspect-[4/3] w-full max-w-[620px] rounded-3xl object-cover shadow-xl"
+            className="aspect-4/3 w-full max-w-155 rounded-3xl object-cover shadow-xl"
           />
         </Reveal>
       </div>

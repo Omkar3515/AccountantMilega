@@ -1,0 +1,11 @@
+const FindJobs = () => {
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <h1 className=" text-center text-4xl font-bold text-slate-800">
+        Find Jobs Page is Under Development.
+      </h1>
+    </div>
+  );
+};
+
+export default FindJobs;

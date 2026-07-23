@@ -6,26 +6,26 @@ export const NAV_LINKS = [
 
   {
     title: "Find Jobs",
-    path: "/",
+    path: "/find-jobs",
   },
 
   {
     title: "For Employers",
-    path: "/",
+    path: "/for-employers",
   },
 
   {
     title: "Pricing",
-    path: "/",
+    path: "/pricing",
   },
 
   {
     title: "About Us",
-    path: "/",
+    path: "/about-us",
   },
 
   {
     title: "Contact Us",
-    path: "/",
+    path: "/contact-us",
   },
 ];

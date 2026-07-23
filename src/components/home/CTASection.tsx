@@ -23,11 +23,11 @@ const CTASection = () => (
             </div>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button className="h-14 w-full bg-green-600 text-white hover:bg-green-700 sm:w-auto sm:min-w-[220px]">
+            <Button className="h-14 w-full bg-green-600 text-white hover:bg-green-700 sm:w-auto sm:min-w-55">
               Register as Candidate{" "}
               <ArrowRight size={20} className="shrink-0" />
             </Button>
-            <Button className="h-14 w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto sm:min-w-[220px]">
+            <Button className="h-14 w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto sm:min-w-55">
               Register as Employer <ArrowRight size={20} className="shrink-0" />
             </Button>
           </div>

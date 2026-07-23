@@ -1,28 +1,33 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
-import HeroSection from "./components/home/HeroSection";
-import Statistics from "./components/home/Statistics";
-import WhyChooseUs from "./components/home/WhyChooseUs";
-import HowItWorks from "./components/home/HowItWorks";
-import CTASection from "./components/home/CTASection";
-import Footer from "./components/layout/Footer";
-
+import Home from "./pages/Home";
+import FindJobs from "./pages/FindJobs";
+import ForEmployers from "./pages/ForEmployers";
+import Pricing from "./pages/Pricing";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
       <Navbar />
-      
-      <HeroSection />
 
-      <Statistics />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <WhyChooseUs />
+        <Route path="/find-jobs" element={<FindJobs />} />
 
-      <HowItWorks />
+        <Route path="/for-employers" element={<ForEmployers />} />
 
-      <CTASection />
+        <Route path="/pricing" element={<Pricing />} />
 
-      <Footer />
+        <Route path="/about-us" element={<AboutUs />} />
+
+        <Route path="/contact-us" element={<ContactUs />} />
+
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </>
   );
 }
