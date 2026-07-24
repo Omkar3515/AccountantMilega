@@ -66,7 +66,13 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                <Link to="/login" onClick={() => setIsOpen(false)} className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-blue-600 px-5 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50">Login</Link>
+<a
+  href="https://accountant-milega-dashboard.vercel.app/"
+  onClick={() => setIsOpen(false)}
+  className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-blue-600 px-5 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50"
+>
+  Login
+</a>               
                 <Button
                   type="button"
                   className="w-full bg-blue-600 text-white hover:bg-blue-700"
